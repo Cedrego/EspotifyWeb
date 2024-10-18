@@ -10,6 +10,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Iniciar Sesion</title>
+       <script>
+            function redirect(option) {
+                if (option === "Registrar") {
+                    window.location.href = "Registrar.jsp";  // Ruta actualizada
+                } else {
+                    window.location.href = "Usuario.jsp";  // Ruta actualizada
+                }
+            }
+        </script>
     </head>
     <body>
         <h1>Inicie Sesion</h1>
@@ -18,5 +27,6 @@
         <p><lable>Contraseña:</lable><input type="password" name="pass"</p>
         <button type="submit">Ingresar</button>
     </form>
+         <button onclick="redirect('Registrar')">Registrar</button>
     </body>
 </html>

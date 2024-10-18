@@ -34,6 +34,7 @@ public interface ICtrl {
     
     public abstract boolean existeCliente(String nick);
     public abstract boolean existeArtista(String nick);
-    public boolean existePassC(String nick,String pass);
-    public boolean existePassA(String nick,String pass);
+    public abstract boolean existePassC(String nick,String pass);
+    public abstract boolean existePassA(String nick,String pass);
+    public abstract boolean exisUs(String nick, String email);
 }

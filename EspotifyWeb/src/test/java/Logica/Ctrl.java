@@ -209,4 +209,20 @@ public class Ctrl implements ICtrl{
        }
         return false;
     }
+    @Override
+    public boolean exisUs(String nick, String email){
+        List<Cliente> ListCli=controlPersist.traerClientes();
+        List<Artista> ListArt=controlPersist.traerArtistas();
+        for(Cliente cli: ListCli){
+            if(cli.getNickname().equalsIgnoreCase(nick) || cli.getCorreo().equalsIgnoreCase(email)){
+                return true;
+            }
+        }
+        for(Artista art: ListArt){
+            if(art.getNickname().equalsIgnoreCase(nick) || art.getCorreo().equalsIgnoreCase(email)){
+                return true;
+            }
+        }
+        return false;
+    }
 }
